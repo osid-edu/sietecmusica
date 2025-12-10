@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siete C | Electronic Press Kit</title>
+    <meta name="description" content="EPK Oficial de la banda donostiarra Siete C. Rock áspero, directo y conceptual.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Roboto+Mono:wght@300;400&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- VARIABLES & RESET --- */
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #e0e0e0;
+            --accent-color: #a8dadc; /* Menta suave similar al logo */
+            --secondary-accent: #457b9d;
+            --dark-gray: #1a1a1a;
+            --tape-gray: #2b2b2b;
+            --font-display: 'Oswald', sans-serif;
+            --font-body: 'Work Sans', sans-serif;
+            --font-tech: 'Roboto Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- UTILITIES --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            cursor: pointer;
+            background: transparent;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(168, 218, 220, 0.4);
+        }
+
+        .btn-small {
+            padding: 8px 20px;
+            font-size: 0.8rem;
+            margin-top: 10px;
+            border: 1px solid #555;
+            color: #aaa;
+        }
+        
+        .btn-small:hover {
+            border-color: var(--accent-color);
+            color: white;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+            color: white;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+
+        /* --- HEADER / HERO --- */
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('https://github.com/osid-edu/sietecmusica/blob/main/7C_ORHI_STUDIO_01_Interior_BN%20(1).jpg?raw=true') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            z-index: 2;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 5rem;
+            font-weight: 700;
+            letter-spacing: 10px;
+            margin-bottom: 10px;
+            color: white;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+        }
+
+        .logo-sub {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            font-family: var(--font-tech);
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #ccc;
+            border-top: 1px solid var(--accent-color);
+            border-bottom: 1px solid var(--accent-color);
+            padding: 15px 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- NAV --- */
+        nav {
+            background-color: var(--dark-gray);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--tape-gray);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px 25px;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: #888;
+        }
+
+        nav a:hover, nav a.active {
+            color: white;
+            background-color: var(--tape-gray);
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        /* --- BIO SECTION --- */
+        #bio {
+            padding: 80px 0;
+            background-color: var(--bg-color);
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .bio-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #bbb;
+        }
+
+        .bio-highlight {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: white;
+            line-height: 1.3;
+            margin: 2rem 0;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 20px;
+        }
+
+        .members-list {
+            margin-top: 2rem;
+            font-family: var(--font-tech);
+            font-size: 0.9rem;
+            color: var(--accent-color);
+        }
+
+        .members-list li {
+            margin-bottom: 5px;
+        }
+
+        .bio-img-container {
+            position: relative;
+        }
+
+        .bio-img {
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--tape-gray);
+            box-shadow: 10px 10px 0px rgba(168, 218, 220, 0.1);
+        }
+
+        /* --- DISCOGRAPHY --- */
+        #music {
+            padding: 80px 0;
+            background-color: var(--dark-gray);
+            background-image: radial-gradient(circle at center, #222 0%, #1a1a1a 100%);
+        }
+
+        .latest-release {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            background: var(--bg-color);
+            padding: 30px;
+            border: 1px solid var(--tape-gray);
+        }
+
+        .album-cover {
+            width: 300px;
+            height: 300px;
+            flex-shrink: 0;
+            background: #333; 
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #444;
+        }
+        
+        .album-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .album-info h3 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .album-meta {
+            font-family: var(--font-tech);
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .tracklist {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .track-badge {
+            background: var(--tape-gray);
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+        }
+
+        .discography-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .disco-item {
+            text-align: center;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .disco-item:hover {
+            opacity: 1;
+        }
+
+        .disco-cover {
+            width: 100%;
+            aspect-ratio: 1;
+            background: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #444;
+            overflow: hidden;
+        }
+        
+        .disco-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- PRESS / CLIPPING --- */
+        #press {
+            padding: 80px 0;
+            background-color: #111;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        #press::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: -10%;
+            width: 120%;
+            height: 200px;
+            background: repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #222 10px, #222 20px);
+            opacity: 0.3;
+            transform: rotate(-5deg);
+            z-index: 0;
+        }
+
+        .press-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .press-card {
+            background: #fff;
+            color: #111;
+            padding: 25px;
+            transform: rotate(-1deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .press-card:nth-child(even) {
+            transform: rotate(2deg);
+        }
+
+        .press-card:hover {
+            transform: scale(1.05) rotate(0deg);
+            z-index: 10;
+            box-shadow: 0 15px 30px rgba(168, 218, 220, 0.3);
+        }
+        
+        .press-card::after {
+            content: '\f35d';
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.9rem;
+            color: #999;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .press-card:hover::after {
+            opacity: 1;
+            color: var(--secondary-accent);
+        }
+
+        .press-logo {
+            height: 50px;
+            margin-bottom: 15px;
+            display: block;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .press-logo img {
+            height: 100%;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .press-quote {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.2rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        .press-author {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #666;
+            text-align: right;
+            display: block;
+        }
+
+        .media-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .media-logo-item {
+            height: 60px;
+            filter: grayscale(100%) brightness(150%);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+
+        .media-logo-item:hover {
+            filter: grayscale(0%) brightness(100%);
+            opacity: 1;
+        }
+
+        .media-logo-item img {
+            height: 100%;
+            width: auto;
+        }
+
+        /* --- VIDEO / MEDIA (UPDATED FOR CLICKABLE THUMBNAILS) --- */
+        #video {
+            padding: 80px 0;
+            background: var(--bg-color);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .video-highlight {
+            margin-bottom: 40px;
+        }
+
+        /* New Style for Fake Player */
+        .video-thumbnail-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            background: #000;
+            border: 1px solid var(--tape-gray);
+            overflow: hidden;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .video-thumbnail-container:hover {
+            border-color: var(--accent-color);
+        }
+
+        .video-thumbnail-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: opacity 0.3s, transform 0.5s;
+        }
+
+        .video-thumbnail-container:hover img {
+            opacity: 0.6;
+            transform: scale(1.05);
+        }
+
+        .play-button-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 4rem;
+            z-index: 2;
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+            opacity: 0.9;
+            transition: transform 0.3s;
+        }
+
+        .video-thumbnail-container:hover .play-button-overlay {
+            transform: translate(-50%, -50%) scale(1.2);
+            color: var(--accent-color);
+        }
+        
+        .video-meta {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .video-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        /* --- LIVE GALLERY --- */
+        #live {
+            padding: 80px 0;
+            background: #050505;
+        }
+
+        .live-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .live-photo {
+            aspect-ratio: 4/3; 
+            background: #222;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .live-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .live-photo:hover img {
+            transform: scale(1.1);
+            filter: brightness(60%);
+        }
+
+        .live-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: white;
+            font-family: var(--font-tech);
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            transform: translateY(10px);
+        }
+
+        .live-photo:hover .live-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* --- CONTACT --- */
+        #contact {
+            padding: 80px 0;
+            background-color: var(--dark-gray);
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid var(--accent-color);
+            padding: 40px;
+            background: rgba(0,0,0,0.3);
+        }
+        
+        .contact-details {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-icon {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .social-icon:hover {
+            color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #555;
+            background: black;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .bio-grid {
+                grid-template-columns: 1fr;
+            }
+            .video-grid, .live-grid {
+                grid-template-columns: 1fr;
+            }
+            .latest-release {
+                flex-direction: column;
+            }
+            .album-cover {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1;
+            }
+            .logo-text {
+                font-size: 3rem;
+            }
+            .media-logos {
+                gap: 20px;
+            }
+            .media-logo-item {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header id="home">
+        <div class="hero-content">
+            <h1 class="logo-text">SIETE C</h1>
+            <p class="logo-sub">ROCK ÁSPERO, DIRECTO Y CONCEPTUAL</p>
+            <div class="hero-quote">
+                "Un puñetazo de realidad en el estómago desde el primer instante."
+            </div>
+            <a href="#music" class="btn">ESCUCHAR AHORA</a>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#music">Música</a></li>
+            <li><a href="#press">Prensa</a></li>
+            <li><a href="#video">Vídeos</a></li>
+            <li><a href="#live">Directo</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- BIO SECTION -->
+    <section id="bio">
+        <div class="container">
+            <h2 class="section-title">La Banda</h2>
+            <div class="bio-grid">
+                <div class="bio-text">
+                    <p class="bio-highlight">"Ninguno es capitán y todos lo son. Esa es la clave de su resistencia."</p>
+                    <p>SIETE C es una hermandad forjada en más de una década de rock en Donostia. Formada en 2011, la banda ha transitado desde la intimidad artesanal hasta la vorágine eléctrica de su sonido actual.</p>
+                    <p>Tras ser seleccionados en la prestigiosa residencia <strong>Kutxa Kultur Musika (2020)</strong>, la banda dio un salto cualitativo. Su identidad actual gravita por distintas órbitas del rock: hard-rock, grunge y post-punk, con una narrativa lírica ácida y crítica que explora el miedo y la soledad en un mundo hiperconectado.</p>
+                    
+                    <ul class="members-list">
+                        <li>// RAÚL ABUIN (VOZ)</li>
+                        <li>// EDUARDO AMADO (GUITARRA, TECLAS)</li>
+                        <li>// IKER AMEZAGA (GUITARRA)</li>
+                        <li>// IKER HERNÁNDEZ (BAJO)</li>
+                        <li>// GUIDO LÓPEZ DE VICUÑA (BATERÍA)</li>
+                    </ul>
+                </div>
+                <div class="bio-img-container">
+                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/7C_ORHI_STUDIO_16_Brut_BN_01_redux.jpg?raw=true" class="bio-img" alt="Siete C Banda - Foto Promocional">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MUSIC SECTION -->
+    <section id="music">
+        <div class="container">
+            <h2 class="section-title">Discografía</h2>
+            
+            <!-- Latest Release -->
+            <div class="latest-release">
+                <div class="album-cover">
+                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/eubi.jpg?raw=true" alt="Portada El Último Bastión Idiota">
+                </div>
+                <div class="album-info">
+                    <h3>EL ÚLTIMO BASTIÓN IDIOTA</h3>
+                    <span class="album-meta">LP // 2022 // PRODUCCIÓN DE RAÚL PÉREZ (LA MINA)</span>
+                    <p>Una narrativa retro-futurista. Un disco conceptual que empieza en un "aquí y ahora" y mira hacia atrás. Grabado en Sevilla.</p>
+                    
+                    <div class="tracklist">
+                        <span class="track-badge">02. Animales</span>
+                        <span class="track-badge">03. Entra y Sobrevive</span>
+                        <span class="track-badge">09. El Último Bastión Idiota</span>
+                    </div>
+
+                    <a href="https://linktr.ee/sietecmusica" target="_blank" class="btn">
+                        <i class="fab fa-spotify"></i> ESCUCHAR EN STREAMING
+                    </a>
+                </div>
+            </div>
+
+            <!-- Previous Works -->
+            <h4 style="font-family:var(--font-tech); color:#666; margin-bottom:20px;">// CATÁLOGO ANTERIOR</h4>
+            <div class="discography-grid">
+                
+                <div class="disco-item">
+                    <div class="disco-cover">
+                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/gen%20nomada.jpg?raw=true" alt="Gen Nómada">
+                    </div>
+                    <small>GEN NÓMADA (2018)</small>
+                </div>
+                
+                <div class="disco-item">
+                    <div class="disco-cover">
+                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/buenos%20vivientes.jpg?raw=true" alt="Buenos Vivientes">
+                    </div>
+                    <small>BUENOS VIVIENTES (2015)</small>
+                </div>
+                
+                <div class="disco-item">
+                    <div class="disco-cover">
+                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/jovenes%20en%20celo.jpg?raw=true" alt="Jóvenes en Celo">
+                    </div>
+                    <small>JÓVENES EN CELO (2014)</small>
+                </div>
+                
+                <div class="disco-item">
+                    <div class="disco-cover">
+                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/familia.jpg?raw=true" alt="Familia">
+                    </div>
+                    <small>FAMILIA (2011)</small>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESS SECTION -->
+    <section id="press">
+        <div class="container">
+            <h2 class="section-title">En Medios</h2>
+            <div class="press-grid">
+                
+                <a href="https://www.mondosonoro.com/noticias-actualidad-musical/estreno-el-ultimo-bastion-idiota-siete-c/" target="_blank" class="press-card" title="Leer en Mondo Sonoro">
+                    <div class="press-logo">
+                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/mondo%20sonoro.png?raw=true" alt="Mondo Sonoro">
+                    </div>
+                    <p class="press-quote">"Un trabajo que gravita por distintas órbitas del rock... El resultado son nueve temas repletos de momentos sencillos y otros más duros."</p>
+                    <span class="press-author">- Andrés G. De la Riva (7/10)</span>
+                </a>
+
+                <a href="https://www.diariovasco.com/culturas/musica/zazpi-talde-donostiarra-20221002105036-nt.html" target="_blank" class="press-card" title="Leer en Diario Vasco">
+                    <div class="press-logo">
+                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/logo-vector-el-diario-vasco.jpg?raw=true" alt="Diario Vasco">
+                    </div>
+                    <p class="press-quote">"Siete C talde donostiarra bueltan da 'Animales' singlearekin... eta SIETE C-ren sonoritate berria aurkezten du."</p>
+                    <span class="press-author">- El Diario Vasco</span>
+                </a>
+
+                <a href="https://www.ivoox.com/los40-cara-a-siete-c-audios-mp3_rf_96343277_1.html" target="_blank" class="press-card" title="Escuchar Podcast">
+                    <div class="press-logo">
+                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/los40%20euskadi.jpg?raw=true" alt="Los 40 Cara A">
+                    </div>
+                    <p class="press-quote">"Este es un disco en el que el concepto Tiempo es una constante... ¡te entran ganas de seguir escuchándolo!"</p>
+                    <span class="press-author">- Los 40 Cara A</span>
+                </a>
+
+            </div>
+
+            <div class="media-logos">
+                <div class="media-logo-item" title="Los 40 Euskadi">
+                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/los40%20euskadi.jpg?raw=true" alt="Los 40">
+                </div>
+                <div class="media-logo-item" title="Radio 3">
+                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/radio%203%20logo.jpg?raw=true" alt="Radio 3">
+                </div>
+                <div class="media-logo-item" title="Diario Vasco">
+                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/logo-vector-el-diario-vasco.jpg?raw=true" alt="Diario Vasco">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO SECTION (UPDATED: CLICKABLE IMAGE) -->
+    <section id="video">
+        <div class="container">
+            <h2 class="section-title">Visuales</h2>
+            
+            <!-- Video Principal (Z14) -->
+            <div class="video-highlight">
+                <a href="https://www.youtube.com/watch?v=BNiFZesT2kQ" target="_blank" title="Ver Videoclip en YouTube" style="text-decoration:none;">
+                    <div class="video-thumbnail-container">
+                        <!-- Thumbnail automática de YouTube para Z14 -->
+                        <img src="https://img.youtube.com/vi/BNiFZesT2kQ/maxresdefault.jpg" alt="Z14 Videoclip Thumbnail">
+                        <div class="play-button-overlay"><i class="fas fa-play-circle"></i></div>
+                    </div>
+                </a>
+                <div class="video-meta">
+                    <span class="video-title">Z14 / VIDEOCLIP OFICIAL</span>
+                    <span style="color:var(--secondary-accent); font-family:var(--font-tech);">// DIRIGIDO POR JACOBO PARRA (@KUBKO)</span>
+                </div>
+            </div>
+
+            <!-- Video Secundario (Ventanas) -->
+             <h3 style="margin-top:40px; margin-bottom:20px; color:#999; font-family:var(--font-display);">// OTROS VÍDEOS</h3>
+             <div class="video-grid">
+                <div>
+                    <a href="https://www.youtube.com/watch?v=s6DF0YCgO_4" target="_blank" title="Ver Ventanas en YouTube" style="text-decoration:none;">
+                        <div class="video-thumbnail-container">
+                            <!-- Thumbnail automática de YouTube para Ventanas -->
+                            <img src="https://img.youtube.com/vi/s6DF0YCgO_4/maxresdefault.jpg" alt="Ventanas Videoclip Thumbnail">
+                            <div class="play-button-overlay"><i class="fas fa-play-circle"></i></div>
+                        </div>
+                    </a>
+                    <div class="video-meta">
+                        <div>
+                            <span class="video-title" style="font-size: 1rem;">VENTANAS</span><br>
+                            <small style="color:#666">Imágenes en directo</small>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- LIVE GALLERY SECTION -->
+    <section id="live">
+        <div class="container">
+            <h2 class="section-title">En Directo</h2>
+            <p style="color:#777; margin-bottom: 20px;">Galería de momentos seleccionados.</p>
+            <div class="live-grid">
+                
+                <div class="live-photo">
+                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/festival%20gigante.jpg?raw=true" alt="Festival Gigante">
+                    <div class="live-caption">FESTIVAL GIGANTE 2023</div>
+                </div>
+
+                <div class="live-photo">
+                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/20250516_SIETEC_081.jpg?raw=true" alt="La Cripta">
+                    <div class="live-caption">LA CRIPTA 2025</div>
+                </div>
+
+                <div class="live-photo">
+                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/kubko_raul%20bateria_kk.jpg?raw=true" alt="Kutxa Kultur Batería">
+                    <div class="live-caption">KUTXA KULTUR KLUBA 2023<br><span style="color:#aaa; font-size:0.7em;">FOTO: JACOBO PARRA</span></div>
+                </div>
+
+                <div class="live-photo">
+                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/kubko_raul_kk.jpg?raw=true" alt="Kutxa Kultur Emotiva">
+                    <div class="live-caption">KUTXA KULTUR KLUBA 2023<br><span style="color:#aaa; font-size:0.7em;">FOTO: JACOBO PARRA</span></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-box">
+                <h2 class="section-title" style="font-size: 2rem;">Contratación & Contacto</h2>
+                <p style="margin-bottom: 20px;">Abiertos a booking para festivales y salas temporada 2026.</p>
+                
+                <div class="contact-details">
+                    <p><i class="fas fa-envelope"></i> sietecmusica@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +34 628 889 791</p>
+                </div>
+                
+                <a href="mailto:sietecmusica@gmail.com" class="btn" style="border-color: white; color: white;">
+                    ENVIAR EMAIL
+                </a>
+
+                <div class="social-links">
+                    <a href="https://www.instagram.com/sietecmusica/" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/sietecmusica" target="_blank" class="social-icon" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/user/sietecmusica" target="_blank" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.google.com/search?q=siete+c&sca_esv=c10fa1f35bad6765&sxsrf=AE3TifO0eHOXDIMnIprzBm2O1yV5lrYGJQ%3A1765402331831&source=hp&ei=2-Y5aaLCL9_Q2roP1cmFgAk&iflsig=AOw8s4IAAAAAaTn0661QMtjl3i5DcQdaYgOTQTwG8YLv&ved=0ahUKEwjim_yW_LORAxVfqFYBHdVkAZAQ4dUDCBs&uact=5&oq=siete+c&gs_lp=Egdnd3Mtd2l6IgdzaWV0ZSBjMgQQIxgnMgQQIxgnMgQQIxgnMgoQLhiABBhDGIoFMgUQABiABDIFEAAYgAQyBRAuGIAEMgUQABiABDIFEAAYgAQyBRAuGIAESIgZULQEWLoVcAN4AJABAJgBhAGgAaMIqgEDMC45uAEDyAEA-AEBmAIMoALYCKgCCsICBxAjGCcY6gLCAg0QIxjwBRgnGMkCGOoCwgIKECMYgAQYJxiKBcICCxAAGIAEGLEDGIMBwgIKEAAYgAQYQxiKBcICERAuGIAEGLEDGNEDGIMBGMcBwgIQEC4YgAQY0QMYQxjHARiKBcICDhAAGIAEGLEDGIMBGIoFwgILEC4YgAQYsQMYgwHCAhAQABiABBixAxhDGIMBGIoFwgIMEAAYgAQYQxiKBRgKwgIREC4YgAQYsQMYgwEYxwEYrwHCAgsQLhiABBjRAxjHAcICDRAAGIAEGLEDGEMYigXCAg0QLhiABBixAxhDGIoFmAMF8QWj-tHWXxi5eZIHAzMuOaAH9G-yBwMwLjm4B8oIwgcFMC41LjfIBySACAA&sclient=gws-wiz" target="_blank" class="social-icon" title="Buscar en Google"><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SIETE C. Todos los derechos reservados. | Fotos por Alvaro Sau Razkin (ORHI Studios) & Jacobo Parra</p>
+    </footer>
+
+    <script>
+        // Smooth Scrolling Script
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Sticky Nav highlight
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section, header');
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav ul li a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

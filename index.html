@@ -115,7 +115,8 @@
         /* --- HEADER / HERO --- */
         header {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('https://github.com/osid-edu/sietecmusica/blob/main/7C_ORHI_STUDIO_01_Interior_BN%20(1).jpg?raw=true') no-repeat center center/cover;
+            /* Optimizado: Enlace directo a raw.githubusercontent.com */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('https://raw.githubusercontent.com/osid-edu/sietecmusica/main/7C_ORHI_STUDIO_01_Interior_BN%20(1).jpg') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -237,6 +238,8 @@
 
         .bio-img-container {
             position: relative;
+            min-height: 400px;
+            background-color: #111;
         }
 
         .bio-img {
@@ -244,6 +247,8 @@
             height: auto;
             border: 1px solid var(--tape-gray);
             box-shadow: 10px 10px 0px rgba(168, 218, 220, 0.1);
+            display: block;
+            transition: opacity 0.3s;
         }
 
         /* --- DISCOGRAPHY --- */
@@ -276,6 +281,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: opacity 0.3s;
         }
 
         .album-info h3 {
@@ -338,6 +344,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: opacity 0.3s;
         }
 
         /* --- PRESS / CLIPPING --- */
@@ -423,6 +430,7 @@
             width: auto;
             max-width: 100%;
             object-fit: contain;
+            transition: opacity 0.3s;
         }
 
         .press-quote {
@@ -468,9 +476,10 @@
         .media-logo-item img {
             height: 100%;
             width: auto;
+            transition: opacity 0.3s;
         }
 
-        /* --- VIDEO / MEDIA (UPDATED FOR CLICKABLE THUMBNAILS) --- */
+        /* --- VIDEO / MEDIA --- */
         #video {
             padding: 80px 0;
             background: var(--bg-color);
@@ -486,7 +495,6 @@
             margin-bottom: 40px;
         }
 
-        /* New Style for Fake Player */
         .video-thumbnail-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 */
@@ -566,7 +574,7 @@
 
         .live-photo {
             aspect-ratio: 4/3; 
-            background: #222;
+            background: #222; 
             overflow: hidden;
             position: relative;
             cursor: pointer;
@@ -576,7 +584,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s;
+            transition: transform 0.5s, opacity 0.3s;
         }
 
         .live-photo:hover img {
@@ -676,6 +684,13 @@
                 height: 40px;
             }
         }
+        
+        /* Clase para imagenes fallidas */
+        .img-load-error {
+            opacity: 0.3 !important;
+            filter: grayscale(100%);
+            border: 2px dashed red !important;
+        }
     </style>
 </head>
 <body>
@@ -723,7 +738,8 @@
                     </ul>
                 </div>
                 <div class="bio-img-container">
-                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/7C_ORHI_STUDIO_16_Brut_BN_01_redux.jpg?raw=true" class="bio-img" alt="Siete C Banda - Foto Promocional">
+                    <!-- ENLACE OPTIMIZADO: raw.githubusercontent.com -->
+                    <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/7C_ORHI_STUDIO_16_Brut_BN_01_redux.jpg" class="bio-img" alt="Siete C Banda - Foto Promocional" loading="lazy">
                 </div>
             </div>
         </div>
@@ -737,7 +753,8 @@
             <!-- Latest Release -->
             <div class="latest-release">
                 <div class="album-cover">
-                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/eubi.jpg?raw=true" alt="Portada El Último Bastión Idiota">
+                    <!-- ENLACE OPTIMIZADO -->
+                    <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/eubi.jpg" alt="Portada El Último Bastión Idiota" loading="lazy">
                 </div>
                 <div class="album-info">
                     <h3>EL ÚLTIMO BASTIÓN IDIOTA</h3>
@@ -760,30 +777,38 @@
             <h4 style="font-family:var(--font-tech); color:#666; margin-bottom:20px;">// CATÁLOGO ANTERIOR</h4>
             <div class="discography-grid">
                 
+                <!-- Gen Nómada -->
                 <div class="disco-item">
                     <div class="disco-cover">
-                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/gen%20nomada.jpg?raw=true" alt="Gen Nómada">
+                        <!-- ENLACE OPTIMIZADO -->
+                        <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/gen%20nomada.jpg" alt="Gen Nómada" loading="lazy">
                     </div>
                     <small>GEN NÓMADA (2018)</small>
                 </div>
                 
+                <!-- Buenos Vivientes -->
                 <div class="disco-item">
                     <div class="disco-cover">
-                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/buenos%20vivientes.jpg?raw=true" alt="Buenos Vivientes">
+                        <!-- ENLACE OPTIMIZADO -->
+                        <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/buenos%20vivientes.jpg" alt="Buenos Vivientes" loading="lazy">
                     </div>
                     <small>BUENOS VIVIENTES (2015)</small>
                 </div>
                 
+                <!-- Jóvenes en Celo -->
                 <div class="disco-item">
                     <div class="disco-cover">
-                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/jovenes%20en%20celo.jpg?raw=true" alt="Jóvenes en Celo">
+                        <!-- ENLACE OPTIMIZADO -->
+                        <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/jovenes%20en%20celo.jpg" alt="Jóvenes en Celo" loading="lazy">
                     </div>
                     <small>JÓVENES EN CELO (2014)</small>
                 </div>
                 
+                <!-- Familia -->
                 <div class="disco-item">
                     <div class="disco-cover">
-                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/familia.jpg?raw=true" alt="Familia">
+                        <!-- ENLACE OPTIMIZADO -->
+                        <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/familia.jpg" alt="Familia" loading="lazy">
                     </div>
                     <small>FAMILIA (2011)</small>
                 </div>
@@ -798,25 +823,31 @@
             <h2 class="section-title">En Medios</h2>
             <div class="press-grid">
                 
+                <!-- MondoSonoro -->
                 <a href="https://www.mondosonoro.com/noticias-actualidad-musical/estreno-el-ultimo-bastion-idiota-siete-c/" target="_blank" class="press-card" title="Leer en Mondo Sonoro">
                     <div class="press-logo">
-                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/mondo%20sonoro.png?raw=true" alt="Mondo Sonoro">
+                        <!-- ENLACE OPTIMIZADO -->
+                        <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/mondo%20sonoro.png" alt="Mondo Sonoro" loading="lazy">
                     </div>
                     <p class="press-quote">"Un trabajo que gravita por distintas órbitas del rock... El resultado son nueve temas repletos de momentos sencillos y otros más duros."</p>
                     <span class="press-author">- Andrés G. De la Riva (7/10)</span>
                 </a>
 
+                <!-- Diario Vasco -->
                 <a href="https://www.diariovasco.com/culturas/musica/zazpi-talde-donostiarra-20221002105036-nt.html" target="_blank" class="press-card" title="Leer en Diario Vasco">
                     <div class="press-logo">
-                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/logo-vector-el-diario-vasco.jpg?raw=true" alt="Diario Vasco">
+                        <!-- ENLACE OPTIMIZADO -->
+                        <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/logo-vector-el-diario-vasco.jpg" alt="Diario Vasco" loading="lazy">
                     </div>
                     <p class="press-quote">"Siete C talde donostiarra bueltan da 'Animales' singlearekin... eta SIETE C-ren sonoritate berria aurkezten du."</p>
                     <span class="press-author">- El Diario Vasco</span>
                 </a>
 
+                <!-- Los 40 Cara A -->
                 <a href="https://www.ivoox.com/los40-cara-a-siete-c-audios-mp3_rf_96343277_1.html" target="_blank" class="press-card" title="Escuchar Podcast">
                     <div class="press-logo">
-                        <img src="https://github.com/osid-edu/sietecmusica/blob/main/los40%20euskadi.jpg?raw=true" alt="Los 40 Cara A">
+                        <!-- ENLACE OPTIMIZADO -->
+                        <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/los40%20euskadi.jpg" alt="Los 40 Cara A" loading="lazy">
                     </div>
                     <p class="press-quote">"Este es un disco en el que el concepto Tiempo es una constante... ¡te entran ganas de seguir escuchándolo!"</p>
                     <span class="press-author">- Los 40 Cara A</span>
@@ -824,21 +855,25 @@
 
             </div>
 
+            <!-- Radio Logos List -->
             <div class="media-logos">
                 <div class="media-logo-item" title="Los 40 Euskadi">
-                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/los40%20euskadi.jpg?raw=true" alt="Los 40">
+                    <!-- ENLACE OPTIMIZADO -->
+                    <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/los40%20euskadi.jpg" alt="Los 40" loading="lazy">
                 </div>
                 <div class="media-logo-item" title="Radio 3">
-                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/radio%203%20logo.jpg?raw=true" alt="Radio 3">
+                    <!-- ENLACE OPTIMIZADO -->
+                    <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/radio%203%20logo.jpg" alt="Radio 3" loading="lazy">
                 </div>
                 <div class="media-logo-item" title="Diario Vasco">
-                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/logo-vector-el-diario-vasco.jpg?raw=true" alt="Diario Vasco">
+                    <!-- ENLACE OPTIMIZADO -->
+                    <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/logo-vector-el-diario-vasco.jpg" alt="Diario Vasco" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VIDEO SECTION (UPDATED: CLICKABLE IMAGE) -->
+    <!-- VIDEO SECTION -->
     <section id="video">
         <div class="container">
             <h2 class="section-title">Visuales</h2>
@@ -847,8 +882,7 @@
             <div class="video-highlight">
                 <a href="https://www.youtube.com/watch?v=BNiFZesT2kQ" target="_blank" title="Ver Videoclip en YouTube" style="text-decoration:none;">
                     <div class="video-thumbnail-container">
-                        <!-- Thumbnail automática de YouTube para Z14 -->
-                        <img src="https://img.youtube.com/vi/BNiFZesT2kQ/maxresdefault.jpg" alt="Z14 Videoclip Thumbnail">
+                        <img src="https://img.youtube.com/vi/BNiFZesT2kQ/maxresdefault.jpg" alt="Z14 Videoclip Thumbnail" loading="lazy">
                         <div class="play-button-overlay"><i class="fas fa-play-circle"></i></div>
                     </div>
                 </a>
@@ -864,8 +898,7 @@
                 <div>
                     <a href="https://www.youtube.com/watch?v=s6DF0YCgO_4" target="_blank" title="Ver Ventanas en YouTube" style="text-decoration:none;">
                         <div class="video-thumbnail-container">
-                            <!-- Thumbnail automática de YouTube para Ventanas -->
-                            <img src="https://img.youtube.com/vi/s6DF0YCgO_4/maxresdefault.jpg" alt="Ventanas Videoclip Thumbnail">
+                            <img src="https://img.youtube.com/vi/s6DF0YCgO_4/maxresdefault.jpg" alt="Ventanas Videoclip Thumbnail" loading="lazy">
                             <div class="play-button-overlay"><i class="fas fa-play-circle"></i></div>
                         </div>
                     </a>
@@ -887,23 +920,31 @@
             <p style="color:#777; margin-bottom: 20px;">Galería de momentos seleccionados.</p>
             <div class="live-grid">
                 
+                <!-- Foto 1 -->
                 <div class="live-photo">
-                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/festival%20gigante.jpg?raw=true" alt="Festival Gigante">
+                    <!-- ENLACE OPTIMIZADO -->
+                    <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/festival%20gigante.jpg" alt="Festival Gigante" loading="lazy">
                     <div class="live-caption">FESTIVAL GIGANTE 2023</div>
                 </div>
 
+                <!-- Foto 2 -->
                 <div class="live-photo">
-                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/20250516_SIETEC_081.jpg?raw=true" alt="La Cripta">
+                    <!-- ENLACE OPTIMIZADO -->
+                    <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/20250516_SIETEC_081.jpg" alt="La Cripta" loading="lazy">
                     <div class="live-caption">LA CRIPTA 2025</div>
                 </div>
 
+                <!-- Foto 3 -->
                 <div class="live-photo">
-                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/kubko_raul%20bateria_kk.jpg?raw=true" alt="Kutxa Kultur Batería">
+                    <!-- ENLACE OPTIMIZADO -->
+                    <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/kubko_raul%20bateria_kk.jpg" alt="Kutxa Kultur Batería" loading="lazy">
                     <div class="live-caption">KUTXA KULTUR KLUBA 2023<br><span style="color:#aaa; font-size:0.7em;">FOTO: JACOBO PARRA</span></div>
                 </div>
 
+                <!-- Foto 4 (Emotiva final) -->
                 <div class="live-photo">
-                    <img src="https://github.com/osid-edu/sietecmusica/blob/main/kubko_raul_kk.jpg?raw=true" alt="Kutxa Kultur Emotiva">
+                    <!-- ENLACE OPTIMIZADO -->
+                    <img src="https://raw.githubusercontent.com/osid-edu/sietecmusica/main/kubko_raul_kk.jpg" alt="Kutxa Kultur Emotiva" loading="lazy">
                     <div class="live-caption">KUTXA KULTUR KLUBA 2023<br><span style="color:#aaa; font-size:0.7em;">FOTO: JACOBO PARRA</span></div>
                 </div>
 
@@ -941,8 +982,49 @@
         <p>&copy; 2025 SIETE C. Todos los derechos reservados. | Fotos por Alvaro Sau Razkin (ORHI Studios) & Jacobo Parra</p>
     </footer>
 
+    <!-- SCRIPT DE SEGURIDAD PARA IMAGENES -->
     <script>
-        // Smooth Scrolling Script
+        document.addEventListener("DOMContentLoaded", function() {
+            // Selecciona todas las imagenes de la página
+            const images = document.querySelectorAll('img');
+            
+            images.forEach(img => {
+                // 1. Manejador de error: Si falla, añade clase y transparencia
+                img.onerror = function() {
+                    console.log("Error cargando imagen:", this.src);
+                    this.classList.add("img-load-error"); // Añade estilo de error visual
+                    this.dataset.hasError = "true";
+                    // Añadimos un texto alternativo si falla
+                    this.title = "Imagen no cargada. Pasa el ratón para reintentar.";
+                };
+
+                // 2. Manejador de HOVER (Lo que pediste):
+                // Si la imagen tiene error, al pasar el ratón intenta recargarla
+                img.onmouseenter = function() {
+                    if (this.dataset.hasError === "true") {
+                        console.log("Intentando recargar imagen por hover...");
+                        
+                        // Guardamos la fuente actual
+                        const currentSrc = this.src;
+                        
+                        // Añadimos un parámetro de tiempo para "engañar" al navegador y forzar descarga nueva
+                        // (Evita que use la versión "fallida" de la caché)
+                        const separator = currentSrc.includes('?') ? '&' : '?';
+                        // Limpiamos timestamp anterior si existe para no acumular
+                        const cleanSrc = currentSrc.replace(/(\?|&)retry=\d+/, '');
+                        const newSeparator = cleanSrc.includes('?') ? '&' : '?';
+                        
+                        this.src = `${cleanSrc}${newSeparator}retry=${Date.now()}`;
+                        
+                        // Reseteamos estado visual esperando que cargue
+                        this.classList.remove("img-load-error");
+                        this.dataset.hasError = "false";
+                    }
+                };
+            });
+        });
+
+        // Script de scroll suave original
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -952,7 +1034,7 @@
             });
         });
 
-        // Sticky Nav highlight
+        // Sticky Nav highlight original
         window.addEventListener('scroll', () => {
             let current = '';
             const sections = document.querySelectorAll('section, header');
